@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7a18, #af002d, #320b86);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    width: 80%;
+    max-width: 540px;
+    transition: transform 0.3s ease;
+}
+
+.game-container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 15px;
+    width: 70%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    background-color: #f0e68c;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: translateY(-5px);
+}
+
+.feedback p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.score {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.high-score {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffdc00;
+}
+
+.reset-btn {
+    background-color: #32cd32;
+    margin-top: 30px;
+    padding: 15px 12px;
+    display: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #228b22;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
